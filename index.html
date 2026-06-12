@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anagha Enterprise | Bengaluru's Most Trusted AC, HVAC, CCTV & Electrical Specialists</title>
+  <meta name="description" content="Anagha Enterprise in Rajajinagar, Bengaluru offers 24/7 AC sales & service, AC rentals, HVAC solutions, CCTV installations, electrical work, and AMC contracts. Google Rated 4.9.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3e6394',
+            accent: '#af7b4c',
+            cta: '#af7b4c',
+            'cta-hover': '#926038',
+            'light-grey': '#ebd8c1',
+            whatsapp: '#25D366',
+            'whatsapp-hover': '#1ebd59',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'premium': '0 10px 30px -10px rgba(62, 99, 148, 0.15)',
+            'premium-hover': '0 20px 40px -15px rgba(175, 123, 76, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom CSS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* CSS-only diagonal grid pattern for Hero section */
+    .bg-grid-pattern {
+      background-color: #3e6394;
+      background-image: 
+        linear-gradient(135deg, rgba(235, 216, 193, 0.08) 25%, transparent 25%), 
+        linear-gradient(225deg, rgba(235, 216, 193, 0.08) 25%, transparent 25%), 
+        linear-gradient(45deg, rgba(235, 216, 193, 0.08) 25%, transparent 25%), 
+        linear-gradient(315deg, rgba(235, 216, 193, 0.08) 25%, transparent 25%);
+      background-position: 40px 0, 40px 0, 0 0, 0 0;
+      background-size: 80px 80px;
+      background-repeat: repeat;
+    }
+
+    /* Floating WhatsApp pulse animation */
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    .pulse-whatsapp {
+      animation: pulse-ring 2s infinite;
+    }
+
+    /* Custom scroll-snap for mobile testimonials */
+    .carousel-container {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel-item {
+      scroll-snap-align: start;
+    }
+
+    /* Hide scrollbar utility */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    /* Glassmorphic card details */
+    .glass-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div id="announcement-bar" class="w-full bg-accent text-white py-2.5 px-4 text-center text-sm font-medium relative z-50 flex items-center justify-center transition-all duration-300">
+    <a href="tel:+919945016098" class="hover:underline flex items-center gap-2">
+      <span class="inline-block animate-bounce">🔧</span> 24/7 Emergency Service Available — Call 099450 16098
+    </a>
+    <button id="close-announcement" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-200 focus:outline-none p-1 text-lg" aria-label="Close Announcement Bar">
+      &times;
+    </button>
+  </div>
+
+  <!-- ==========================================
+       STICKY HEADER & NAVIGATION
+       ========================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-primary/95 text-white w-full border-b border-white/10 transition-all duration-300 ease-in-out glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="nav-container" class="flex items-center justify-between h-20 transition-all duration-300">
+        
+        <!-- Logo Area -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <!-- Multi-service badge SVG -->
+          <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl sm:text-2xl font-extrabold tracking-tight block leading-none">Anagha</span>
+            <span class="text-xs uppercase tracking-widest text-accent font-semibold">Enterprise</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide" aria-label="Desktop navigation">
+          <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-200">Services</a>
+          <a href="#why-choose-us" class="text-gray-300 hover:text-white transition-colors duration-200">Why Choose Us</a>
+          <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-200">Reviews</a>
+          <a href="#quote-section" class="text-gray-300 hover:text-white transition-colors duration-200">Get Quote</a>
+          <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a>
+          <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a>
+        </nav>
+
+        <!-- CTA Call Button -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <a href="tel:+919945016098" class="bg-cta hover:bg-cta-hover text-white px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 shadow-lg shadow-cta/25 hover:scale-105 active:scale-95 transition-all duration-200" aria-label="Call Anagha Enterprise now">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M21.384 17.791c-1.391-1.391-3.645-1.391-5.035 0l-.83.83c-.152.152-.397.186-.59.08-1.57-.85-3.32-2.6-4.17-4.17-.105-.193-.071-.438.08-.59l.83-.83c1.391-1.391 1.391-3.645 0-5.035l-2.07-2.07c-1.391-1.391-3.645-1.391-5.035 0L2.344 7.206c-1.74 1.74-2.12 4.41-.93 6.55 2.41 4.34 6.07 8 10.41 10.41 2.14 1.19 4.81.81 6.55-.93l1.17-1.17c1.391-1.391 1.391-3.645 0-5.035l-2.07-2.07z"/>
+            </svg>
+            <span>Call Now</span>
+          </a>
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1" aria-label="Toggle Navigation Menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-white/10 px-4 py-6 space-y-4 transition-all duration-300">
+      <a href="#services" class="block text-gray-300 hover:text-white font-medium text-lg border-b border-white/5 pb-2">Services</a>
+      <a href="#why-choose-us" class="block text-gray-300 hover:text-white font-medium text-lg border-b border-white/5 pb-2">Why Choose Us</a>
+      <a href="#testimonials" class="block text-gray-300 hover:text-white font-medium text-lg border-b border-white/5 pb-2">Reviews</a>
+      <a href="#quote-section" class="block text-gray-300 hover:text-white font-medium text-lg border-b border-white/5 pb-2">Get Quote</a>
+      <a href="#about" class="block text-gray-300 hover:text-white font-medium text-lg border-b border-white/5 pb-2">About Us</a>
+      <a href="#contact" class="block text-gray-300 hover:text-white font-medium text-lg pb-2">Contact</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ==========================================
+         1. HERO SECTION
+         ========================================== -->
+    <section id="hero" class="bg-grid-pattern text-white py-16 lg:py-28 relative overflow-hidden">
+      <!-- Dark gradient overlay to ensure high contrast -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text & CTA -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-accent/20 border border-accent/40 rounded-full text-accent text-sm font-semibold tracking-wide uppercase">
+              <span class="w-2.5 h-2.5 bg-accent rounded-full animate-ping"></span>
+              24/7 Premium Support in Bengaluru
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+              Bengaluru's Most Trusted <span class="text-accent">AC, HVAC & CCTV</span> Experts
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-gray-300 font-medium">
+              24/7 Service • All Brands • Rajajinagar & Surrounding Areas
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+              <!-- Primary CTA: Phone -->
+              <a href="tel:+919945016098" class="w-full sm:w-auto bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl shadow-cta/20 hover:scale-105 active:scale-95 transition-all duration-200" aria-label="Call Anagha Enterprise: 099450 16098">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M21.384 17.791c-1.391-1.391-3.645-1.391-5.035 0l-.83.83c-.152.152-.397.186-.59.08-1.57-.85-3.32-2.6-4.17-4.17-.105-.193-.071-.438.08-.59l.83-.83c1.391-1.391 1.391-3.645 0-5.035l-2.07-2.07c-1.391-1.391-3.645-1.391-5.035 0L2.344 7.206c-1.74 1.74-2.12 4.41-.93 6.55 2.41 4.34 6.07 8 10.41 10.41 2.14 1.19 4.81.81 6.55-.93l1.17-1.17c1.391-1.391 1.391-3.645 0-5.035l-2.07-2.07z"/>
+                </svg>
+                Call Now: 099450 16098
+              </a>
+              <!-- Secondary CTA: WhatsApp -->
+              <a href="https://wa.me/919945016098?text=Hi%20Anagha%20Enterprise%2C%20I%20need%20a%20service%20quote." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-whatsapp hover:bg-whatsapp-hover text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl shadow-whatsapp/20 hover:scale-105 active:scale-95 transition-all duration-200" aria-label="Message Anagha Enterprise on WhatsApp">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.758.459 3.474 1.33 4.988l-1.417 5.176 5.295-1.39c1.465.799 3.11 1.214 4.78 1.215h.004c5.506 0 9.988-4.482 9.988-9.988 0-2.667-1.038-5.173-2.925-7.062-1.886-1.888-4.394-2.927-7.062-2.927zm5.86 14.05c-.24.675-1.212 1.31-1.666 1.4-1.284.254-2.984-.23-4.57-1.814-1.586-1.585-2.068-3.286-1.814-4.57.09-.454.725-1.426 1.4-1.666.216-.076.43-.064.58.04l1.378 1.378c.15.15.162.364.04.58l-.517.517c-.12.12-.132.336-.01.58.647 1.294 1.706 2.353 3.002 3.002.244.122.46.11.58-.01l.517-.517c.216-.122.43-.11.58.04l1.378 1.378c.104.15.092.364.016.58z"/>
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+
+            <!-- Trust Bar -->
+            <div class="pt-8 border-t border-white/10 mt-8">
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center lg:text-left">
+                <div class="flex flex-col sm:flex-row items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-2xl">⭐</span>
+                  <div>
+                    <span class="block text-base font-bold text-white leading-none">4.9 Rating</span>
+                    <span class="text-xs text-gray-400">84 Google Reviews</span>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-2xl text-accent">🛡️</span>
+                  <div>
+                    <span class="block text-base font-bold text-white leading-none">24/7 Available</span>
+                    <span class="text-xs text-gray-400">Emergency Support</span>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-2xl text-cta">🏆</span>
+                  <div>
+                    <span class="block text-base font-bold text-white leading-none">10+ Years</span>
+                    <span class="text-xs text-gray-400">Local Experience</span>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-2xl text-green-500">🏢</span>
+                  <div>
+                    <span class="block text-base font-bold text-white leading-none">Rajajinagar</span>
+                    <span class="text-xs text-gray-400">Locally Based Office</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Graphic (Premium SVG representation of services) -->
+          <div class="lg:col-span-5 hidden lg:block relative">
+            <div class="absolute -inset-1 bg-gradient-to-r from-accent to-cta rounded-full blur-2xl opacity-10 animate-pulse"></div>
+            <svg class="w-full h-auto drop-shadow-2xl relative" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid Backing -->
+              <circle cx="250" cy="250" r="230" fill="#3e6394" stroke="#af7b4c" stroke-width="2" stroke-dasharray="8 8" opacity="0.3"/>
+              <circle cx="250" cy="250" r="170" fill="none" stroke="#af7b4c" stroke-width="1" opacity="0.2"/>
+              
+              <!-- AC cooling ring -->
+              <path d="M 250 80 A 170 170 0 0 1 420 250" stroke="#af7b4c" stroke-width="4" stroke-linecap="round"/>
+              <path d="M 420 250 A 170 170 0 0 1 250 420" stroke="#af7b4c" stroke-width="4" stroke-linecap="round"/>
+              <path d="M 250 420 A 170 170 0 0 1 80 250" stroke="#25D366" stroke-width="4" stroke-linecap="round"/>
+              <path d="M 80 250 A 170 170 0 0 1 250 80" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Central Service Hub -->
+              <circle cx="250" cy="250" r="100" fill="#263f5e" stroke="#af7b4c" stroke-width="3"/>
+              
+              <!-- Large snowflake (AC Symbol) inside central hub -->
+              <g transform="translate(250, 250) scale(1.5)">
+                <path d="M-15 0 L15 0 M0 -15 L0 15 M-10 -10 L10 10 M-10 10 L10 -10" stroke="#af7b4c" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M-7.5 -7.5 L-10 0 L-7.5 7.5 L0 10 L7.5 7.5 L10 0 L7.5 -7.5 L0 -10 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+              </g>
+
+              <!-- HVAC Duct / Wind Lines -->
+              <path d="M 330 180 Q 370 190 410 170" stroke="#af7b4c" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+              <path d="M 320 200 Q 380 215 430 195" stroke="#af7b4c" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+              <!-- CCTV Camera Icon Widget -->
+              <g transform="translate(100, 120)">
+                <rect x="0" y="0" width="80" height="80" rx="16" fill="#263f5e" stroke="#af7b4c" stroke-width="2"/>
+                <!-- Camera head -->
+                <path d="M20 35 L45 25 L45 55 L20 45 Z" fill="#af7b4c" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+                <rect x="45" y="32" width="15" height="16" rx="3" fill="#af7b4c"/>
+                <circle cx="28" cy="40" r="3" fill="#FFFFFF"/>
+                <circle cx="70" cy="25" r="4" fill="#FF0000" class="animate-ping"/>
+                <circle cx="70" cy="25" r="4" fill="#FF0000"/>
+              </g>
+
+              <!-- Electrical Lightning Widget -->
+              <g transform="translate(320, 300)">
+                <rect x="0" y="0" width="80" height="80" rx="16" fill="#263f5e" stroke="#af7b4c" stroke-width="2"/>
+                <path d="M40 15 L25 45 L38 45 L32 68 L55 38 L42 38 Z" fill="#af7b4c" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+              </g>
+
+              <!-- Certified Badge -->
+              <g transform="translate(210, 380)">
+                <rect x="0" y="0" width="80" height="36" rx="8" fill="#25D366" />
+                <text x="40" y="22" fill="#FFFFFF" font-family="'Poppins', sans-serif" font-weight="700" font-size="12" text-anchor="middle">24/7 OPEN</text>
+              </g>
+            </svg>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         2. SOCIAL PROOF BAR
+         ========================================== -->
+    <section id="counters-bar" class="bg-primary border-y border-white/10 py-10 relative z-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+          
+          <!-- Counter 1 -->
+          <div class="pt-6 md:pt-0 flex flex-col items-center justify-center space-y-2">
+            <span class="text-4xl sm:text-5xl font-extrabold text-white flex items-center">
+              <span class="counter-value" data-target="500" data-suffix="+">0</span>+
+            </span>
+            <span class="text-sm uppercase tracking-widest text-accent font-bold">Jobs Completed</span>
+          </div>
+
+          <!-- Counter 2 -->
+          <div class="pt-6 md:pt-0 flex flex-col items-center justify-center space-y-2">
+            <span class="text-4xl sm:text-5xl font-extrabold text-white flex items-center">
+              <span class="counter-value" data-target="4.9" data-decimals="1">0.0</span>★
+            </span>
+            <span class="text-sm uppercase tracking-widest text-accent font-bold">Google Rating</span>
+          </div>
+
+          <!-- Counter 3 -->
+          <div class="pt-6 md:pt-0 flex flex-col items-center justify-center space-y-2">
+            <span class="text-4xl sm:text-5xl font-extrabold text-white flex items-center">
+              <span class="counter-value" data-target="24" data-prefix="" data-suffix="/7">0</span>/7
+            </span>
+            <span class="text-sm uppercase tracking-widest text-accent font-bold">Emergency Support</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. SERVICES SECTION
+         ========================================== -->
+    <section id="services" class="py-20 lg:py-28 bg-white scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span class="text-accent uppercase tracking-widest font-extrabold text-sm block">Our Expertise</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">What We Do</h2>
+          <div class="w-16 h-1 bg-cta mx-auto rounded-full"></div>
+          <p class="text-gray-600 text-base sm:text-lg">
+            Professional sales, prompt servicing, and expert installation across Bengaluru.
+          </p>
+        </div>
+
+        <!-- Services Grid: 2 columns on mobile, 3 on desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+          
+          <!-- Card 1: AC Sales & Service -->
+          <div class="bg-white rounded-2xl border-t-4 border-accent p-4 sm:p-8 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                <!-- Snowflake / AC SVG -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3m15.536-6.536L5.464 18.536M18.536 18.536L5.464 5.464M12 9a3 3 0 100 6 3 3 0 000-6z" />
+                </svg>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary mb-3">AC Sales & Service</h3>
+              <p class="text-gray-600 text-base leading-relaxed">All major brands. Installation, repair, and maintenance.</p>
+            </div>
+            <div class="pt-6">
+              <a href="#quote-section" class="text-accent font-semibold text-base hover:underline inline-flex items-center gap-1 group">
+                Get Quote <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: AC Rental -->
+          <div class="bg-white rounded-2xl border-t-4 border-accent p-4 sm:p-8 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                <!-- Calendar / Clock AC Rental SVG -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary mb-3">AC Rental</h3>
+              <p class="text-gray-600 text-base leading-relaxed">Flexible short and long-term AC rental for homes and offices.</p>
+            </div>
+            <div class="pt-6">
+              <a href="#quote-section" class="text-accent font-semibold text-base hover:underline inline-flex items-center gap-1 group">
+                Get Quote <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: HVAC Solutions -->
+          <div class="bg-white rounded-2xl border-t-4 border-accent p-4 sm:p-8 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                <!-- Fan HVAC SVG -->
+                <svg class="w-7 h-7 animate-[spin_10s_linear_infinite]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary mb-3">HVAC Solutions</h3>
+              <p class="text-gray-600 text-base leading-relaxed">Commercial and residential HVAC installation and servicing.</p>
+            </div>
+            <div class="pt-6">
+              <a href="#quote-section" class="text-accent font-semibold text-base hover:underline inline-flex items-center gap-1 group">
+                Get Quote <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: CCTV Camera Installation -->
+          <div class="bg-white rounded-2xl border-t-4 border-accent p-4 sm:p-8 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                <!-- CCTV Camera SVG -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary mb-3">CCTV Camera Installation</h3>
+              <p class="text-gray-600 text-base leading-relaxed">Sales, installation, and maintenance of all camera brands.</p>
+            </div>
+            <div class="pt-6">
+              <a href="#quote-section" class="text-accent font-semibold text-base hover:underline inline-flex items-center gap-1 group">
+                Get Quote <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Electrical Work -->
+          <div class="bg-white rounded-2xl border-t-4 border-accent p-4 sm:p-8 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                <!-- Plug/Bolt SVG -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary mb-3">Electrical Work</h3>
+              <p class="text-gray-600 text-base leading-relaxed">Complete electrical contracting for residential and commercial spaces.</p>
+            </div>
+            <div class="pt-6">
+              <a href="#quote-section" class="text-accent font-semibold text-base hover:underline inline-flex items-center gap-1 group">
+                Get Quote <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6: Annual Maintenance Contracts (AMC) -->
+          <div class="bg-white rounded-2xl border-t-4 border-accent p-4 sm:p-8 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                <!-- Check contract SVG -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-primary mb-3">Annual Maintenance Contracts (AMC)</h3>
+              <p class="text-gray-600 text-base leading-relaxed">Affordable yearly service packages for AC and HVAC units.</p>
+            </div>
+            <div class="pt-6">
+              <a href="#quote-section" class="text-accent font-semibold text-base hover:underline inline-flex items-center gap-1 group">
+                Get Quote <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. WHY CHOOSE US SECTION
+         ========================================== -->
+    <section id="why-choose-us" class="py-20 lg:py-28 bg-light-grey border-y border-gray-100 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span class="text-accent uppercase tracking-widest font-extrabold text-sm block">Our Commitments</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Why Choose Us</h2>
+          <div class="w-16 h-1 bg-cta mx-auto rounded-full"></div>
+          <p class="text-gray-600 text-base sm:text-lg">
+            We hold ourselves to the highest standards of speed, expertise, and transparency.
+          </p>
+        </div>
+
+        <!-- Alternating Grid Layout for the 4 Points -->
+        <div class="space-y-12 max-w-5xl mx-auto">
+          
+          <!-- Point 1: No Delay -->
+          <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 sm:p-10 rounded-2xl shadow-premium border border-gray-50">
+            <!-- Icon/Visual Area -->
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-green-50 text-green-500 rounded-2xl flex items-center justify-center shrink-0">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <!-- Content Area -->
+            <div class="space-y-2 text-center md:text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center md:justify-start gap-2">
+                <span class="text-green-500">✓</span> No Delay
+              </h3>
+              <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                Prompt service, always on time. We value your schedule and guarantee arrival within the committed window.
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 2: All Brands (Flipped visually on desktop via order) -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 sm:p-10 rounded-2xl shadow-premium border border-gray-50">
+            <!-- Icon/Visual Area -->
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-50 text-accent rounded-2xl flex items-center justify-center shrink-0">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <!-- Content Area -->
+            <div class="space-y-2 text-center md:text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center md:justify-start gap-2">
+                <span class="text-accent">✓</span> All Brands
+              </h3>
+              <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                We service every AC and CCTV brand. Our technicians are factory-trained to diagnose, repair, and install all models.
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 3: Fair Pricing -->
+          <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 sm:p-10 rounded-2xl shadow-premium border border-gray-50">
+            <!-- Icon/Visual Area -->
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-amber-50 text-cta rounded-2xl flex items-center justify-center shrink-0">
+              <!-- Rupee Symbol custom vector -->
+              <span class="text-3xl font-extrabold text-cta">₹</span>
+            </div>
+            <!-- Content Area -->
+            <div class="space-y-2 text-center md:text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center md:justify-start gap-2">
+                <span class="text-cta">✓</span> Fair Pricing
+              </h3>
+              <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                Quality work without breaking the bank. Upfront quotations with absolutely zero hidden charges.
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 4: 24/7 Availability (Flipped visually) -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 sm:p-10 rounded-2xl shadow-premium border border-gray-50">
+            <!-- Icon/Visual Area -->
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center shrink-0">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <!-- Content Area -->
+            <div class="space-y-2 text-center md:text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-primary flex items-center justify-center md:justify-start gap-2">
+                <span class="text-purple-600">✓</span> 24/7 Availability
+              </h3>
+              <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                Emergency calls answered any time. Our team is fully staffed to handle electrical faults, AC breakdowns, or camera issues around the clock.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. TESTIMONIALS SECTION
+         ========================================== -->
+    <section id="testimonials" class="py-20 lg:py-28 bg-white scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span class="text-accent uppercase tracking-widest font-extrabold text-sm block">Customer Reviews</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">What Our Customers Say</h2>
+          <div class="w-16 h-1 bg-cta mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Mobile: Horizontal snap scroll / Desktop: Row -->
+        <div class="relative">
+          <div class="flex overflow-x-auto gap-6 pb-8 carousel-container no-scrollbar md:grid md:grid-cols-3 md:overflow-visible">
+            
+            <!-- Review Card 1 -->
+            <div class="carousel-item w-[85%] md:w-auto shrink-0 bg-white border border-gray-150 rounded-2xl p-6 sm:p-8 shadow-premium flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <!-- Stars -->
+                <div class="flex items-center gap-2">
+                  <span class="text-cta text-xl">★★★★★</span>
+                  <span class="text-xs text-gray-500 font-medium bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+                </div>
+                <!-- Quote text -->
+                <p class="text-gray-700 italic text-base leading-relaxed">
+                  "No delay in service, good behaviour, prompt at work"
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
+                    SR
+                  </div>
+                  <div>
+                    <span class="block text-sm font-bold text-primary">Srinivasa R.</span>
+                    <span class="text-xs text-gray-500">Verified Customer</span>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-accent bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Google</span>
+              </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="carousel-item w-[85%] md:w-auto shrink-0 bg-white border border-gray-150 rounded-2xl p-6 sm:p-8 shadow-premium flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <!-- Stars -->
+                <div class="flex items-center gap-2">
+                  <span class="text-cta text-xl">★★★★★</span>
+                  <span class="text-xs text-gray-500 font-medium bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+                </div>
+                <!-- Quote text -->
+                <p class="text-gray-700 italic text-base leading-relaxed">
+                  "Good quality and professional services. Highly recommend."
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
+                    MK
+                  </div>
+                  <div>
+                    <span class="block text-sm font-bold text-primary">Mahesh K.</span>
+                    <span class="text-xs text-gray-500">Business Owner</span>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-accent bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Google</span>
+              </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="carousel-item w-[85%] md:w-auto shrink-0 bg-white border border-gray-150 rounded-2xl p-6 sm:p-8 shadow-premium flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <!-- Stars -->
+                <div class="flex items-center gap-2">
+                  <span class="text-cta text-xl">★★★★★</span>
+                  <span class="text-xs text-gray-500 font-medium bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+                </div>
+                <!-- Quote text -->
+                <p class="text-gray-700 italic text-base leading-relaxed">
+                  "Highly recommended for anyone looking for quality work without breaking the bank."
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
+                    AN
+                  </div>
+                  <div>
+                    <span class="block text-sm font-bold text-primary">Anjali N.</span>
+                    <span class="text-xs text-gray-500">Rajajinagar Resident</span>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-accent bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Google</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Indicator Dots (Visible on mobile only) -->
+          <div class="flex items-center justify-center gap-2 mt-4 md:hidden">
+            <span class="w-2.5 h-2.5 rounded-full bg-accent" id="dot-0"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gray-300" id="dot-1"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gray-300" id="dot-2"></span>
+          </div>
+        </div>
+
+        <!-- External Link to reviews -->
+        <div class="text-center mt-12">
+          <a href="https://www.google.com/maps/search/?api=1&query=Anagha+Enterprise+Rajajinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="text-accent font-bold text-lg hover:underline inline-flex items-center gap-2 group">
+            View All 84 Google Reviews 
+            <span class="group-hover:translate-x-1.5 transition-transform">&rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. LEAD CAPTURE FORM SECTION
+         ========================================== -->
+    <section id="quote-section" class="py-20 lg:py-28 bg-primary text-white scroll-mt-20 relative overflow-hidden">
+      <!-- Grid Backing subtle -->
+      <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center mb-12 space-y-3">
+          <span class="text-accent uppercase tracking-widest font-extrabold text-sm block">Quick Booking</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Get a Free Service Quote Today</h2>
+          <p class="text-gray-300 text-base sm:text-lg">We'll call you back within 30 minutes</p>
+          <div class="w-16 h-1 bg-cta mx-auto rounded-full mt-4"></div>
+        </div>
+
+        <!-- Form Card Container -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl">
+          
+          <form id="quote-form" class="space-y-6">
+            <div class="grid grid-cols-1 gap-6">
+              
+              <!-- Name -->
+              <div>
+                <label for="form-name" class="block text-sm font-bold text-gray-300 mb-2">Full Name <span class="text-accent">*</span></label>
+                <input type="text" id="form-name" required class="w-full bg-primary/40 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-base min-h-[48px]" placeholder="e.g. Ramesh Kumar">
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label for="form-phone" class="block text-sm font-bold text-gray-300 mb-2">Phone Number <span class="text-accent">*</span></label>
+                <input type="tel" id="form-phone" required class="w-full bg-primary/40 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-base min-h-[48px]" placeholder="e.g. +91 99450 16098">
+              </div>
+
+              <!-- Service Selection -->
+              <div>
+                <label for="form-service" class="block text-sm font-bold text-gray-300 mb-2">Service Needed <span class="text-accent">*</span></label>
+                <select id="form-service" required class="w-full bg-primary/80 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-base min-h-[48px]">
+                  <option value="" disabled selected class="bg-primary text-gray-400">Select a service...</option>
+                  <option value="AC Service" class="bg-primary text-white">AC Service & Repair</option>
+                  <option value="AC Installation" class="bg-primary text-white">AC Installation</option>
+                  <option value="AC Rental" class="bg-primary text-white">AC Rental</option>
+                  <option value="HVAC" class="bg-primary text-white">HVAC Solutions</option>
+                  <option value="CCTV" class="bg-primary text-white">CCTV Installation</option>
+                  <option value="Electrical" class="bg-primary text-white">Electrical Work</option>
+                  <option value="Other" class="bg-primary text-white">Other Inquiry</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="form-message" class="block text-sm font-bold text-gray-300 mb-2">Message (Optional)</label>
+                <textarea id="form-message" rows="3" class="w-full bg-primary/40 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all text-base" placeholder="Describe your requirement (e.g. 2 ton AC service, CCTV repair...)"></textarea>
+              </div>
+
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-cta hover:bg-cta-hover text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-cta/20 hover:scale-[1.02] active:scale-95 transition-all duration-200">
+              Request Free Quote &rarr;
+            </button>
+
+          </form>
+
+          <!-- Success Message State (Hidden Initially) -->
+          <div id="form-success" class="hidden text-center py-12 space-y-4">
+            <div class="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mx-auto text-4xl shadow-inner animate-bounce">
+              ✓
+            </div>
+            <h3 class="text-2xl font-bold text-white">Request Received!</h3>
+            <p class="text-gray-300 text-lg max-w-md mx-auto">
+              ✅ Thank you! We'll call you within 30 minutes.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Direct Contact Footer link -->
+        <div class="text-center mt-8">
+          <p class="text-gray-400">
+            or call us directly at 
+            <a href="tel:+919945016098" class="text-accent font-bold hover:underline">099450 16098</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. ABOUT SECTION
+         ========================================== -->
+    <section id="about" class="py-20 lg:py-28 bg-white scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          <!-- About Content Left -->
+          <div class="space-y-6">
+            <span class="text-accent uppercase tracking-widest font-extrabold text-sm block">Who We Are</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">About Anagha Enterprise</h2>
+            <div class="w-16 h-1 bg-cta rounded-full"></div>
+            
+            <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+              Anagha Enterprise has been Bengaluru's go-to contractor for AC, HVAC, CCTV, and electrical needs. Based in Rajajinagar, we serve homes and businesses across the city with prompt, professional service. Our 4.9-star Google rating from 84+ customers speaks to our commitment to quality and honest pricing.
+            </p>
+            <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+              We operate around the clock with a team of seasoned, background-checked professionals. Whether you need a simple domestic AC service, a full-scale corporate HVAC implementation, or state-of-the-art security installations, we deliver flawless execution with premium components.
+            </p>
+          </div>
+
+          <!-- About Stats Grid Right -->
+          <div class="grid grid-cols-2 gap-4">
+            
+            <!-- Widget 1 -->
+            <div class="bg-light-grey rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div class="w-10 h-10 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
+                🏆
+              </div>
+              <div>
+                <span class="block text-2xl font-bold text-primary">Est. in Blr</span>
+                <span class="text-sm text-gray-500">10+ Years Serving Bengaluru</span>
+              </div>
+            </div>
+
+            <!-- Widget 2 -->
+            <div class="bg-light-grey rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div class="w-10 h-10 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
+                📍
+              </div>
+              <div>
+                <span class="block text-2xl font-bold text-primary">Rajajinagar</span>
+                <span class="text-sm text-gray-500">Locally Based Office</span>
+              </div>
+            </div>
+
+            <!-- Widget 3 -->
+            <div class="bg-light-grey rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div class="w-10 h-10 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
+                ⚡
+              </div>
+              <div>
+                <span class="block text-2xl font-bold text-primary">24/7 Support</span>
+                <span class="text-sm text-gray-500">Always Available</span>
+              </div>
+            </div>
+
+            <!-- Widget 4 -->
+            <div class="bg-light-grey rounded-2xl p-6 border border-gray-100 flex flex-col justify-between">
+              <div class="w-10 h-10 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
+                ⚙️
+              </div>
+              <div>
+                <span class="block text-2xl font-bold text-primary">All Brands</span>
+                <span class="text-sm text-gray-500">AC & CCTV Covered</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         8. CONTACT & FOOTER SECTION
+         ========================================== -->
+    <section id="contact" class="py-20 lg:py-28 bg-light-grey border-t border-gray-200 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span class="text-accent uppercase tracking-widest font-extrabold text-sm block">Locate & Call</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Contact Us & Find Us</h2>
+          <div class="w-16 h-1 bg-cta mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Info & Map Left (7 cols) -->
+          <div class="lg:col-span-7 space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-premium border border-gray-150 space-y-6">
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Address -->
+                <div class="space-y-2">
+                  <span class="text-sm uppercase tracking-wider font-extrabold text-accent">Office Address</span>
+                  <p class="text-gray-700 font-semibold">
+                    4th Main Rd, 8th Cross,<br>Rajajinagar, Bengaluru,<br>Karnataka 560010
+                  </p>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Anagha+Enterprise+4th+Main+Rd+8th+Cross+Rajajinagar+Bengaluru+Karnataka+560010" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-2 bg-accent hover:bg-blue-600 text-white font-bold text-xs uppercase px-4 py-2 rounded-lg transition duration-200 shadow-md">
+                    📍 Get Directions
+                  </a>
+                </div>
+
+                <!-- Contact & Hours -->
+                <div class="space-y-4">
+                  <div class="space-y-1">
+                    <span class="text-sm uppercase tracking-wider font-extrabold text-accent">Contact Phone</span>
+                    <a href="tel:+919945016098" class="block text-xl font-bold text-primary hover:underline">
+                      099450 16098
+                    </a>
+                  </div>
+                  <div class="space-y-1">
+                    <span class="text-sm uppercase tracking-wider font-extrabold text-accent">Operating Hours</span>
+                    <p class="text-gray-700 font-semibold">
+                      Open 24 Hours, 7 Days a Week
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Maps Embed iframe -->
+              <div class="w-full h-80 rounded-2xl overflow-hidden border border-gray-200 shadow-inner relative">
+                <!-- Standard Google Maps embed coordinates for Rajajinagar, Bengaluru -->
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.892695507312!2d77.5539564!3d12.9787126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ddbc71d4677%3A0xeecfa2d8dbbd090a!2sRajajinagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin" 
+                  class="absolute inset-0 w-full h-full border-0" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Anagha Enterprise Location Map">
+                </iframe>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Large Call/WhatsApp Options Card Right (5 cols) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div class="bg-primary text-white rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8 border border-white/10 relative overflow-hidden">
+              <div class="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
+
+              <div class="relative z-10 space-y-6">
+                <div class="space-y-2">
+                  <h3 class="text-2xl font-extrabold">Instant Support</h3>
+                  <p class="text-gray-300">Tap below to talk to our Rajajinagar office immediately.</p>
+                </div>
+
+                <div class="space-y-4">
+                  <!-- Direct Call Callout -->
+                  <a href="tel:+919945016098" class="block w-full bg-cta hover:bg-cta-hover text-white text-center py-4 rounded-xl font-bold text-lg shadow-lg shadow-cta/20 transition duration-200 hover:scale-[1.02] active:scale-95">
+                    📞 Call: 099450 16098
+                  </a>
+
+                  <!-- Direct WhatsApp Callout -->
+                  <a href="https://wa.me/919945016098?text=Hi%20Anagha%20Enterprise%2C%20I%20need%20a%20service%20quote." target="_blank" rel="noopener noreferrer" class="block w-full bg-whatsapp hover:bg-whatsapp-hover text-white text-center py-4 rounded-xl font-bold text-lg shadow-lg shadow-whatsapp/20 transition duration-200 hover:scale-[1.02] active:scale-95">
+                    💬 WhatsApp Message
+                  </a>
+                </div>
+
+                <!-- Repeat small mini form or highlights for UX validation -->
+                <div class="border-t border-white/10 pt-6 space-y-3">
+                  <span class="text-xs font-bold text-accent uppercase tracking-widest block text-center">Service Guarantee</span>
+                  <ul class="text-sm text-gray-300 space-y-2 text-center">
+                    <li>✓ Response within 30 Minutes</li>
+                    <li>✓ No Hidden Diagnostics Cost</li>
+                    <li>✓ Verified & Insured Technicians</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER BOTTOM BAR
+       ========================================== -->
+  <footer class="bg-primary text-white py-12 border-t border-white/10 relative z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="flex items-center justify-center gap-2 font-bold text-lg">
+        <span class="text-accent">⚡</span> Anagha Enterprise
+      </div>
+      <p class="text-gray-400 text-sm">
+        © 2025 Anagha Enterprise. All Rights Reserved. | Rajajinagar, Bengaluru
+      </p>
+      <p class="text-xs text-gray-500">
+        Providing top-tier AC repairs, rental solutions, commercial HVAC, CCTV security, and professional electrical contractor services across Rajajinagar and greater Bengaluru.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       FLOATING ELEMENTS (WhatsApp & Back To Top)
+       ========================================== -->
+  
+  <!-- Back To Top Button (Bottom Left, hidden initially) -->
+  <button id="back-to-top" class="hidden fixed bottom-6 left-6 z-50 bg-primary hover:bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-90 focus:outline-none" aria-label="Scroll to top of the page">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- WhatsApp Floating Button (Bottom Right, always visible) -->
+  <a href="https://wa.me/919945016098?text=Hi%20Anagha%20Enterprise%2C%20I%20need%20a%20service%20quote." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-whatsapp hover:bg-whatsapp-hover text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-90 pulse-whatsapp" aria-label="Contact us on WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.758.459 3.474 1.33 4.988l-1.417 5.176 5.295-1.39c1.465.799 3.11 1.214 4.78 1.215h.004c5.506 0 9.988-4.482 9.988-9.988 0-2.667-1.038-5.173-2.925-7.062-1.886-1.888-4.394-2.927-7.062-2.927zm5.86 14.05c-.24.675-1.212 1.31-1.666 1.4-1.284.254-2.984-.23-4.57-1.814-1.586-1.585-2.068-3.286-1.814-4.57.09-.454.725-1.426 1.4-1.666.216-.076.43-.064.58.04l1.378 1.378c.15.15.162.364.04.58l-.517.517c-.12.12-.132.336-.01.58.647 1.294 1.706 2.353 3.002 3.002.244.122.46.11.58-.01l.517-.517c.216-.122.43-.11.58.04l1.378 1.378c.104.15.092.364.016.58z"/>
+    </svg>
+  </a>
+
+  <!-- ==========================================
+       INTERACTIVE CLIENT LOGIC (JAVASCRIPT)
+       ========================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      // --- 1. Announcement Bar Close Logic ---
+      const announcementBar = document.getElementById("announcement-bar");
+      const closeAnnouncementBtn = document.getElementById("close-announcement");
+      
+      if (closeAnnouncementBtn && announcementBar) {
+        closeAnnouncementBtn.addEventListener("click", () => {
+          announcementBar.classList.add("opacity-0", "-translate-y-full");
+          setTimeout(() => {
+            announcementBar.style.display = "none";
+          }, 300);
+        });
+      }
+
+      // --- 2. Mobile Nav Menu Toggle ---
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          const isOpen = mobileMenu.classList.contains("hidden");
+          if (isOpen) {
+            mobileMenu.classList.remove("hidden");
+            // Change SVG path to "X" shape
+            menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+          } else {
+            mobileMenu.classList.add("hidden");
+            // Restore classic hamburger SVG path
+            menuIcon.setAttribute("d", "M4 6h16M4 12h16m-7 6h7");
+          }
+        });
+
+        // Close mobile nav on click of any link
+        mobileMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            menuIcon.setAttribute("d", "M4 6h16M4 12h16m-7 6h7");
+          });
+        });
+      }
+
+      // --- 3. Sticky Header Shrink on Scroll ---
+      const mainHeader = document.getElementById("main-header");
+      const navContainer = document.getElementById("nav-container");
+
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          navContainer?.classList.remove("h-20");
+          navContainer?.classList.add("h-16");
+          mainHeader?.classList.add("shadow-lg");
+        } else {
+          navContainer?.classList.remove("h-16");
+          navContainer?.classList.add("h-20");
+          mainHeader?.classList.remove("shadow-lg");
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Trigger immediately on load to handle scrolled refresh states
+
+      // --- 4. Animated Counters on Scroll ---
+      const counters = document.querySelectorAll(".counter-value");
+      
+      const animateCounter = (counter) => {
+        const target = parseFloat(counter.getAttribute("data-target"));
+        const decimals = parseInt(counter.getAttribute("data-decimals")) || 0;
+        const duration = 2000; // Total run-time in ms
+        const startTime = performance.now();
+
+        const updateCount = (currentTime) => {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          
+          // Smooth ease-out quad transition
+          const easeProgress = progress * (2 - progress);
+          const currentValue = easeProgress * target;
+
+          if (decimals > 0) {
+            counter.innerText = currentValue.toFixed(decimals);
+          } else {
+            counter.innerText = Math.floor(currentValue);
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            if (decimals > 0) {
+              counter.innerText = target.toFixed(decimals);
+            } else {
+              counter.innerText = target;
+            }
+          }
+        };
+
+        requestAnimationFrame(updateCount);
+      };
+
+      const observerOptions = {
+        root: null,
+        threshold: 0.1 // Triggers when 10% of element is in view
+      };
+
+      const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target); // Runs animation only once
+          }
+        });
+      }, observerOptions);
+
+      counters.forEach(counter => counterObserver.observe(counter));
+
+      // --- 5. Testimonial Carousel Snapping Dot Indicators ---
+      const carousel = document.querySelector(".carousel-container");
+      const dots = [
+        document.getElementById("dot-0"),
+        document.getElementById("dot-1"),
+        document.getElementById("dot-2")
+      ];
+
+      if (carousel && dots[0]) {
+        carousel.addEventListener("scroll", () => {
+          const width = carousel.offsetWidth;
+          const scrollLeft = carousel.scrollLeft;
+          const activeIndex = Math.round(scrollLeft / width);
+          
+          dots.forEach((dot, idx) => {
+            if (dot) {
+              if (idx === activeIndex) {
+                dot.classList.remove("bg-gray-300");
+                dot.classList.add("bg-accent");
+              } else {
+                dot.classList.remove("bg-accent");
+                dot.classList.add("bg-gray-300");
+              }
+            }
+          });
+        });
+      }
+
+      // --- 6. Lead Capture Form Submission (Cosmetic/JS only) ---
+      const quoteForm = document.getElementById("quote-form");
+      const formSuccess = document.getElementById("form-success");
+
+      if (quoteForm && formSuccess) {
+        quoteForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          
+          // Disable submit button and add cosmetic loading state
+          const submitBtn = quoteForm.querySelector("button[type='submit']");
+          const originalText = submitBtn.innerHTML;
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <svg class="animate-spin h-5 w-5 text-white inline-block mr-2" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg> Submitting...
+          `;
+
+          // Simulate API call delay of 1 second
+          setTimeout(() => {
+            quoteForm.classList.add("hidden");
+            formSuccess.classList.remove("hidden");
+          }, 1000);
+        });
+      }
+
+      // --- 7. Back To Top Toggle & Scroll ---
+      const backToTopBtn = document.getElementById("back-to-top");
+
+      if (backToTopBtn) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.remove("hidden");
+          } else {
+            backToTopBtn.classList.add("hidden");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>
